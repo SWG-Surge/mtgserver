@@ -30,10 +30,10 @@ bool ConfigManager::loadConfigData() {
 
 	configStartTime.start();
 
-	if (!lua.runFile("conf/config.lua")) {
-		fatal("ConfigManager failed to parse conf/config.lua");
-		return false;
-	}
+	if (!lua.runFile("../bin/custom_scripts/config.lua")) {
+    	fatal("ConfigManager failed to parse custom_scripts/config.lua");
+    	return false;
+}
 
 	File file("conf/config-local.lua");
 
